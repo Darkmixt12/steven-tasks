@@ -1,0 +1,26 @@
+a{
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+
+.btn1, .btn2, .btn3{
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	font-size: 15px
+	
+}
+
+.btn1{
+	background-color: #22c55e
+}
+
+.btn2{
+	background-color: #f97316
+}
+
+.btn3{
+	background-color: #a855f7
+}

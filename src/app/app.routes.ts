@@ -12,17 +12,17 @@ export const routes: Routes = [
 		import('./store/claudio/component-one/component-one.component')
 	},
 
-	// {
-	// 	path: 'componentTwo',
-	// loadComponent: () =>
-	// 	import('./store/claudio/component-two/component-two.component')
-	// },
+	{
+		path: 'componentTwo',
+	loadComponent: () =>
+		import('./store/claudio/component-two/component-two.component')
+	},
 
-	// {
-	// 	path: 'componentThree',
-	// loadComponent: () =>
-	// 	import('./store/claudio/component-three/component-three.component')
-	// },
+	{
+		path: 'componentThree',
+	loadComponent: () =>
+		import('./store/claudio/component-three/component-three.component')
+	},
 
 
 	{

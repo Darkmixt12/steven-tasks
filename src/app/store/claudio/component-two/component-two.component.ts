@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { componentTwo } from '../claudio-action/claudio-action.component';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from '../../navbar/navbar/navbar.component';
 
 @Component({
   selector: 'app-component-two',

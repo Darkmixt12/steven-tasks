@@ -5,6 +5,7 @@ import { componentOne } from '../claudio-action/claudio-action.component';
 import { CommonModule } from '@angular/common';
 import ComponentTwoComponent from '../component-two/component-two.component';
 import ComponentThreeComponent from '../component-three/component-three.component';
+import { NavbarComponent } from '../../navbar/navbar/navbar.component';
 
 @Component({
   selector: 'app-component-one',
