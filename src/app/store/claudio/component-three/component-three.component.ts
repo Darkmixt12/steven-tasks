@@ -13,15 +13,8 @@ import { selectBooks } from '../claudio-selector/claudio-selector.component';
   styleUrl: './component-three.component.css'
 })
 export default class ComponentThreeComponent {
-  status$!: Observable<string>;
-
   private readonly store = inject(Store)
-  readonly users = this.store.selectSignal(selectBooks);
-
-  // constructor(private status: Store<{ state: string}>) {
-  //     this.status$ = status.select('state')
-  //   }
-  
+  readonly book = this.store.selectSignal(selectBooks);
 
    private status2 = inject(Store<{state: string}>)
       componentThree(){
