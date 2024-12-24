@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { componentTwo } from '../claudio-action/claudio-action.component';
@@ -12,14 +12,15 @@ import { NavbarComponent } from '../../navbar/navbar/navbar.component';
   styleUrl: './component-two.component.css'
 })
 export default class ComponentTwoComponent {
-  status$: Observable<string>;
+  status$!: Observable<string>;
 
-  constructor(private status: Store<{ state: string}>) {
-      this.status$ = status.select('state')
-    }
+  // constructor(private status: Store<{ state: string}>) {
+  //     this.status$ = status.select('state')
+  //   }
 
-
-  componentOne(){
-    this.status.next( componentTwo() )
+   private status2 = inject(Store<{state: string}>)
+  componentTwo(){
+    this.status$ = this.status2.select('state')
+    this.status2.next( componentTwo() )
   }
 }
