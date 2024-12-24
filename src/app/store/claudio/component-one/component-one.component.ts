@@ -17,16 +17,14 @@ export default class ComponentOneComponent {
 
   private readonly store = inject(Store)
   readonly users = this.store.selectSignal(selectBooks);
+
   // constructor(private status: Store<{ state: string}>) {
   //     this.status$ = status.select('state')
   //   }
 
    private status2 = inject(Store<{state: string}>)
-
-
   componentOne(){
-
-    this.status2.next( componentOne() )
+    this.status2.next(componentOne())
   }
 
 
