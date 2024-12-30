@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import ComponentTwoComponent from '../component-two/component-two.component';
 import ComponentThreeComponent from '../component-three/component-three.component';
 import { selectBooks } from '../claudio-selector/claudio-selector.component';
+import { ChangeStateFacade } from '../claudio.facade';
 
 @Component({
   selector: 'app-component-one',
@@ -15,16 +16,22 @@ import { selectBooks } from '../claudio-selector/claudio-selector.component';
 })
 export default class ComponentOneComponent {
   private readonly store = inject(Store)
+  private changeStateFacade = inject(ChangeStateFacade)
   readonly book = this.store.selectSignal(selectBooks);
 
   // constructor(private status: Store<{ state: string}>) {
   //     this.status$ = status.select('state')
   //   }
 
-   private status2 = inject(Store<{state: string}>)
+  //  private status2 = inject(Store<{state: string}>)
+  // componentOne(){
+  //   this.status2.next(componentOne())
+  // }
+  
   componentOne(){
-    this.status2.next(componentOne())
-  }
+    this.changeStateFacade.componentOne()
+ }
+
 
 
 }

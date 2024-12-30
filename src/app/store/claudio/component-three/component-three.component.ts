@@ -5,6 +5,7 @@ import { componentThree } from '../claudio-action/claudio-action.component';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../../navbar/navbar/navbar.component';
 import { selectBooks } from '../claudio-selector/claudio-selector.component';
+import { ChangeStateFacade } from '../claudio.facade';
 
 @Component({
   selector: 'app-component-three',
@@ -15,9 +16,14 @@ import { selectBooks } from '../claudio-selector/claudio-selector.component';
 export default class ComponentThreeComponent {
   private readonly store = inject(Store)
   readonly book = this.store.selectSignal(selectBooks);
+  private changeStateFacade = inject(ChangeStateFacade);
 
-   private status2 = inject(Store<{state: string}>)
-      componentThree(){
-        this.status2.dispatch( componentThree() )
-      }
+  //  private status2 = inject(Store<{state: string}>)
+  //     componentThree(){
+  //       this.status2.dispatch( componentThree() )
+  //     }
+
+  componentThree(){
+    this.changeStateFacade.componentThree()
+ }
 }
